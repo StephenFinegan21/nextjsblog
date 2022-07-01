@@ -1,0 +1,31 @@
+
+
+
+.container {
+  max-width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.logo{
+  max-width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 10%;
+  padding-bottom: 2%;
+  padding-top: 5%;
+  border-bottom: 1px solid #dedede;
+  width: 80%;
+  
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+}
