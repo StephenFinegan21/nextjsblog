@@ -14,23 +14,24 @@ export default function Layout({ children, home }) {
 
   return (
     <div className={`theme-${currentTheme.mode}`}>
-    <div className={styles.container}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-     
+      <div className={styles.container}>
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <script src="https://gumroad.com/js/gumroad.js"></script>
+          <meta
+            name="description"
+            content="Learn how to build a personal website using Next.js"
+          />
+          <meta
+            property="og:image"
+            content={`https://og-image.vercel.app/${encodeURI(
+              siteTitle
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          />
+          <meta name="og:title" content={siteTitle} />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Head>
+
         <header className={styles.header}>
           {home ? (
             <>
@@ -60,6 +61,14 @@ export default function Layout({ children, home }) {
           )}
           <ToggleTheme />
           <h1 className={utilStyles.heading2Xl}>Dev Blog</h1>
+          <div className="link-container">
+            <Link href="/store">
+              <p style={{ cursor: "pointer" }}>Store</p>
+            </Link>
+            <Link href="/">
+              <p style={{ cursor: "pointer" }}>Blog</p>
+            </Link>
+          </div>
         </header>
         {!home && (
           <div className={styles.backToHome}>

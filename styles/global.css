@@ -67,6 +67,21 @@
     width: 100%;
     
   }
+
+  .store-item{
+    display: flex;
+    justify-content: space-between;
+    
+    
+  }
+
+  .link-container{
+    display: flex;
+    justify-content:space-between;
+    width: 40%;
+    margin: auto;
+    font-weight: 400;
+  }
 }
 
 @media only screen and (min-width: 600px) {

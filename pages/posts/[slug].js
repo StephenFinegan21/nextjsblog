@@ -9,9 +9,9 @@ import groq from "groq";
 import { ca } from "date-fns/locale";
 
 export default function Post({ posts }) {
-  console.log(posts[0])
-  const [imageUrl, setImageUrl] = useState("");
   
+  const [imageUrl, setImageUrl] = useState("");
+
   useEffect(() => {
     const imgBuilder = imageUrlBuilder({
       projectId: "n4q8lqhk",
@@ -27,18 +27,18 @@ export default function Post({ posts }) {
         <title>{siteTitle}</title>
       </Head>
       <article>
-     
         <h1 className={utilStyles.headingXl}>{posts[0].title}</h1>
-        {posts[0].categories && posts[0].categories.map((title) => <p>- {title}</p>)}
+        {posts[0].categories &&
+          posts[0].categories.map((title) => <p key={title}>- {title}</p>)}
         {imageUrl && <img src={imageUrl} alt={posts[0].title} />}
-        
+
         <BlockContent blocks={posts[0].body} />
       </article>
     </Layout>
   );
 }
 
-export const getServerSideProps = async pageContext => {
+export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
 
   if (!pageSlug) {
@@ -55,14 +55,13 @@ export const getServerSideProps = async pageContext => {
 
     "categories": categories[]->title,
   
-  }`
-  
-  
-  const id = process.env.DB_ID
+  }`;
+
+  const id = process.env.DB_ID;
   const url = `https://${id}.api.sanity.io/v1/data/query/blog?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
-  console.log(result)
-  //const post = result.result[0];
+
+
 
   if (!result.result || !result.result.length) {
     return {
@@ -79,29 +78,3 @@ export const getServerSideProps = async pageContext => {
   }
 };
 
- /*
- title: post.title,
-        body: post.body,
-        image: post.mainImage,
-        _createdAt: post._createdAt,
-        categories : post.categories
-
-
-        useEffect(() => {
-    const imgBuilder = imageUrlBuilder({
-      projectId: "n4q8lqhk",
-      dataset: "blog",
-    });
-
-    setImageUrl(imgBuilder.image(image));
-  }, []);
-
-
-  <article>
-        <h1 className={utilStyles.headingXl}>{title}</h1>
-        {imageUrl && <img src={imageUrl} alt={title} />}
-        {categories && categories.map((c) => <p>{c.title}</p>)}
-        <BlockContent blocks={body} />
-      </article>
-
- */
