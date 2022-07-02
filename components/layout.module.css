@@ -1,13 +1,10 @@
-
-
-
 .container {
-  max-width: 50%;
+  max-width: 80%;
   height: 100%;
   margin: auto;
 }
 
-.logo{
+.logo {
   max-width: 100px;
   display: block;
   margin: auto;
@@ -23,9 +20,25 @@
   padding-top: 5%;
   border-bottom: 1px solid #dedede;
   width: 80%;
-  
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.activeBtn {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nonActiveBtn {
+  color: #989898;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 40%;
+  }
 }

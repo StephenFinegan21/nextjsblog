@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import Nav from "./Nav";
+
 import Link from "next/link";
 import ToggleTheme from "./ToggleTheme";
 import { useTheme } from "../hooks/useTheme";
@@ -10,7 +11,7 @@ export const siteTitle = "Next.js Sample Website";
 
 export default function Layout({ children, home }) {
   const currentTheme = useTheme();
-  //console.log(currentTheme.mode, "on jklo");
+  
 
   return (
     <div className={`theme-${currentTheme.mode}`}>
@@ -33,18 +34,7 @@ export default function Layout({ children, home }) {
         </Head>
 
         <header className={styles.header}>
-          {home ? (
-            <>
-              <Image
-                priority
-                src="/images/avataaars.png"
-                height={80}
-                width={80}
-                alt={"logo"}
-              />
-            </>
-          ) : (
-            <>
+    <>
               <Link href="/">
                 <a>
                   <Image
@@ -58,17 +48,9 @@ export default function Layout({ children, home }) {
                 </a>
               </Link>
             </>
-          )}
+       
           <ToggleTheme />
-          <h1 className={utilStyles.heading2Xl}>Dev Blog</h1>
-          <div className="link-container">
-            <Link href="/store">
-              <p style={{ cursor: "pointer" }}>Store</p>
-            </Link>
-            <Link href="/">
-              <p style={{ cursor: "pointer" }}>Blog</p>
-            </Link>
-          </div>
+          <Nav />
         </header>
         {!home && (
           <div className={styles.backToHome}>
