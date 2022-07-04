@@ -6,8 +6,29 @@ export default function Product() {
     <>
       <div className="store-item">
         <div className="product-info">
+          <h2>Funky Desktop Wallpapers</h2>
+          <p>
+            10 different wallpapers which come in different colours to match
+            your personality and style. With these wallpapers, you will be able
+            to show off your unique taste to your friends, family, and
+            colleagues.
+          </p>
+          <a
+            class="gumroad-button"
+            href="https://developerstephen.gumroad.com/l/idadp"
+          >
+            Buy on
+          </a>
+        </div>
+      </div>
+      <div className="store-item">
+        <div className="product-info">
           <h2>Minimal Phone Wallpapers</h2>
-          <p >A collection of minimal, high quality phone wallpapers. Give your lock screen or wallpaper a clean, fresh look. 13 colours inspired by natural tones are included in the pack.</p>
+          <p>
+            A collection of minimal, high quality phone wallpapers. Give your
+            lock screen or wallpaper a clean, fresh look. 13 colours inspired by
+            natural tones are included in the pack.
+          </p>
           <a
             className="gumroad-button"
             href="https://developerstephen.gumroad.com/l/uopiuw"
@@ -15,7 +36,6 @@ export default function Product() {
             Buy on
           </a>
         </div>
-        
       </div>
     </>
   );

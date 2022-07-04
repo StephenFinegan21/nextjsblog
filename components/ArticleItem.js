@@ -10,7 +10,7 @@ const BlogItem = styled.div`
   width: 100%;
   padding-top: 2%;
   cursor: pointer;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid rgb(172, 172, 172);;
   display: block;
   justify-content: space-between;
   align-items: center;
