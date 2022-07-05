@@ -6,7 +6,7 @@ import utilStyles from "../../styles/utils.module.css";
 import { useState, useEffect } from "react";
 import { siteTitle } from "../../components/layout";
 import groq from "groq";
-import { ca } from "date-fns/locale";
+
 
 export default function Post({ posts }) {
   

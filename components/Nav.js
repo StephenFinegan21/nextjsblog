@@ -23,11 +23,12 @@ export default function Nav() {
     <>
      <h1 className={utilStyles.heading2Xl}>Dev Blog</h1>
           <div className="link-container">
-            <Link href="/store">
-              <p onClick={() => setCurrentPage('/store')} className={currentPage.startsWith('/store')  ? styles.activeBtn : styles.nonActiveBtn}>Store</p>
-            </Link>
+           
             <Link href="/">
               <p onClick={() => setCurrentPage('/')} className={!currentPage.startsWith('/store') ? styles.activeBtn : styles.nonActiveBtn}>Blog</p>
+            </Link>
+            <Link href="/store">
+              <p onClick={() => setCurrentPage('/store')} className={currentPage.startsWith('/store')  ? styles.activeBtn : styles.nonActiveBtn}>Store</p>
             </Link>
           </div>
     </>

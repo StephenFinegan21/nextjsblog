@@ -21,9 +21,11 @@ export default function ToggleTheme() {
   };
 
   useEffect(() => {
- 
-    if (localStorage.getItem("mode") === 'light' || localStorage.getItem("mode") === 'dark' && localStorage.getItem("mode") !== mode) {
-        
+    if (
+      localStorage.getItem("mode") === "light" ||
+      (localStorage.getItem("mode") === "dark" &&
+        localStorage.getItem("mode") !== mode)
+    ) {
       changeMode(localStorage.getItem("mode"));
     }
   }, []);
@@ -38,7 +40,7 @@ export default function ToggleTheme() {
   return (
     <>
       <div
-        className={ mode === "dark" ? "toggle-mode-light" : "toggle-mode-dark"}
+        className={mode === "dark" ? "toggle-mode-light" : "toggle-mode-dark"}
       >
         <motion.div
           whileHover={{ scale: 1.2 }}
@@ -47,9 +49,8 @@ export default function ToggleTheme() {
             rotate: 360,
           }}
         >
-          { mode === "light" && <FaMoon onClick={toggleMode} >dddd </FaMoon>}
-          {mode === "dark" && <FaSun onClick={toggleMode} >llll</FaSun>}
-         
+          {mode === "light" && <FaMoon onClick={toggleMode}>dddd </FaMoon>}
+          {mode === "dark" && <FaSun onClick={toggleMode}>llll</FaSun>}
         </motion.div>
       </div>
     </>

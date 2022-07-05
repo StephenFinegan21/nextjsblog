@@ -8,8 +8,7 @@ export default function Product() {
         <div className="product-info">
           <h2>Funky Desktop Wallpapers</h2>
           <p>
-            10 different wallpapers which come in different colours to match
-            your personality and style. With these wallpapers, you will be able
+            10 different wallpapers which come in different colour gradients. With these wallpapers, you will be able
             to show off your unique taste to your friends, family, and
             colleagues.
           </p>
@@ -17,7 +16,7 @@ export default function Product() {
             class="gumroad-button"
             href="https://developerstephen.gumroad.com/l/idadp"
           >
-            Buy on
+            View on Gumroad
           </a>
         </div>
       </div>
@@ -33,7 +32,7 @@ export default function Product() {
             className="gumroad-button"
             href="https://developerstephen.gumroad.com/l/uopiuw"
           >
-            Buy on
+            View on Gumroad
           </a>
         </div>
       </div>

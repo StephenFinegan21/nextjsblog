@@ -78,6 +78,7 @@ article {
 
 .product-info {
   max-width: 85%;
+  
 }
 
 .link-container {
@@ -86,6 +87,18 @@ article {
   width: 80%;
   margin: auto;
   font-weight: 400;
+}
+
+.gumroad-button{
+  border: #393838 2px solid;
+  border-radius: 5px;
+  margin-top: 10%;
+  background-color: #ff90e8;
+  padding: 10px 20px;
+  max-width: 100%;
+  text-align: center;
+  color: #000;
+  display: block;
 }
 
 @media only screen and (min-width: 600px) {
@@ -98,5 +111,11 @@ article {
 
   .link-container {
     width: 40%;
+  }
+
+  .gumroad-button{
+  
+    max-width: 50%;
+  
   }
 }

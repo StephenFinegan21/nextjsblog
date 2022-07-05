@@ -7,18 +7,17 @@ import Link from "next/link";
 import ToggleTheme from "./ToggleTheme";
 import { useTheme } from "../hooks/useTheme";
 
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Developer Stephen";
 
 export default function Layout({ children, home }) {
   const currentTheme = useTheme();
-  
 
   return (
     <div className={`theme-${currentTheme.mode}`}>
       <div className={styles.container}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <script src="https://gumroad.com/js/gumroad.js"></script>
+       
           <meta
             name="description"
             content="Learn how to build a personal website using Next.js"
@@ -34,21 +33,21 @@ export default function Layout({ children, home }) {
         </Head>
 
         <header className={styles.header}>
-    <>
-              <Link href="/">
-                <a>
-                  <Image
-                    priority
-                    src="/images/avataaars.png"
-                    className={styles.logo}
-                    height={80}
-                    width={80}
-                    alt={"logo"}
-                  />
-                </a>
-              </Link>
-            </>
-       
+          <>
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/avataaars.png"
+                  className={styles.logo}
+                  height={80}
+                  width={80}
+                  alt={"logo"}
+                />
+              </a>
+            </Link>
+          </>
+
           <ToggleTheme />
           <Nav />
         </header>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import styled from "styled-components";
 import utilStyles from "../styles/utils.module.css";
 import Date from "./date";
-import Category from "./Category";
 
 const BlogItem = styled.div`
   margin: auto;
