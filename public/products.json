@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "name": "Vibrant Desktop Wallpapers",
+      "description": "9 different desktop wallpapers with deep, vibrant gradients. .",
+      "link": "https://developerstephen.gumroad.com/l/rsper?_gl=1*1gxd2nc*_ga*ODgzMTU5Mjc2LjE2NTY3MDc0OTg.*_ga_6LJN6D94N6*MTY1NzY1OTY1NC4zMS4xLjE2NTc2NjIwMTguMA..",
+      "image": "/images/VibrantMockup1.png"
+    },
+    {
+      "name": "Funky Desktop Wallpapers",
+      "description": "10 different wallpapers which come in different colour gradients. With these wallpapers, you will be able to show off your unique taste to your friends, family, and colleagues.",
+      "link": "https://developerstephen.gumroad.com/l/idadp",
+      "image": "/images/products/LightMockup.png"
+    },
+    {
+      "name": "Minimal Phone Wallpapers",
+      "description": "A collection of minimal, high quality phone wallpapers. Give your lock screen or wallpaper a clean, fresh look. 13 colours inspired by natural tones are included in the pack.",
+      "link": "https://developerstephen.gumroad.com/l/uopiuw",
+      "image": "/images/products/dark.png"
+    }
+  ]
+}

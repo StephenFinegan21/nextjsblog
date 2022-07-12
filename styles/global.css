@@ -62,24 +62,8 @@ article {
   width: 100%;
 }
 
-.store-item {
-  padding-bottom: 10%;
 
-  border-bottom: 1px solid rgb(172, 172, 172);;
 
-  margin: auto;
-  width: 100%;
-  padding-top: 2%;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product-info {
-  max-width: 85%;
-  
-}
 
 .link-container {
   display: flex;
@@ -89,17 +73,7 @@ article {
   font-weight: 400;
 }
 
-.gumroad-button{
-  border: #393838 2px solid;
-  border-radius: 5px;
-  margin-top: 10%;
-  background-color: #ff90e8;
-  padding: 10px 20px;
-  max-width: 100%;
-  text-align: center;
-  color: #000;
-  display: block;
-}
+
 
 @media only screen and (min-width: 600px) {
   img {
@@ -113,9 +87,7 @@ article {
     width: 40%;
   }
 
-  .gumroad-button{
-  
+  .gumroad-button {
     max-width: 50%;
-  
   }
 }

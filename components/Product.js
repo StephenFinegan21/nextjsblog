@@ -1,41 +1,60 @@
 import React from "react";
 import Image from "next/image";
+import styled from "styled-components";
 
-export default function Product() {
+
+const ProductItem = styled.div`
+  border-bottom: 1px solid rgb(172, 172, 172);
+  margin: auto;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+
+
+
+`;
+
+const ImageContainer = styled.div`
+  display: none;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+  @media only screen and (min-width: 700px) {
+    display: block;
+  }
+`;
+
+const GumroadButton = styled.a`
+  border: #393838 2px solid;
+  border-radius: 5px;
+  margin-top: 10%;
+  background-color: #ff90e8;
+  padding: 10px 20px;
+  max-width: 100%;
+  text-align: center;
+  color: #000;
+  display: block;
+`;
+
+
+
+export default function Product({ data }) {
+  const { name, description, image, link } = data;
+
   return (
     <>
-      <div className="store-item">
-        <div className="product-info">
-          <h2>Funky Desktop Wallpapers</h2>
-          <p>
-            10 different wallpapers which come in different colour gradients. With these wallpapers, you will be able
-            to show off your unique taste to your friends, family, and
-            colleagues.
-          </p>
-          <a
-            class="gumroad-button"
-            href="https://developerstephen.gumroad.com/l/idadp"
-          >
-            View on Gumroad
-          </a>
-        </div>
-      </div>
-      <div className="store-item">
-        <div className="product-info">
-          <h2>Minimal Phone Wallpapers</h2>
-          <p>
-            A collection of minimal, high quality phone wallpapers. Give your
-            lock screen or wallpaper a clean, fresh look. 13 colours inspired by
-            natural tones are included in the pack.
-          </p>
-          <a
-            className="gumroad-button"
-            href="https://developerstephen.gumroad.com/l/uopiuw"
-          >
-            View on Gumroad
-          </a>
-        </div>
-      </div>
+      <ProductItem>
+        <h2>{name}</h2>
+        <ImageContainer>
+          <Image src={image} alt="product" width={700} height={500} />
+        </ImageContainer>
+        <p>{description}</p>
+        <GumroadButton href={link}>
+          View on Gumroad
+        </GumroadButton>
+      </ProductItem>
     </>
   );
 }
